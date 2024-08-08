@@ -1,0 +1,60 @@
+.outlay {
+  &__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  &__top {
+    &__container {
+      display: flex;
+      align-items: stretch;
+      border-bottom: 1px solid gray;
+    }
+  }
+
+  &__select {
+    width: 221px;
+    color: #fff;
+    text-align: start;
+    padding: 10px 0;
+    position: relative;
+    border: none;
+    border-right: 1px solid gray;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 10px;
+      top: 21px;
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+    }
+
+    span {
+      opacity: 0.6;
+    }
+
+    span:last-child {
+      display: block;
+      font-size: 12px;
+    }
+  }
+
+  &__tab {
+    font-size: 18px;
+    color: #fff;
+    padding: 0 10px;
+    border: none;
+    border-right: 1px solid gray;
+  }
+
+  &__inner {
+    background-color: #202124;
+    width: 100%;
+    margin-right: -15px;
+  }
+}

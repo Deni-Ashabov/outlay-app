@@ -1,0 +1,98 @@
+.outlay_row {
+  color: #fff;
+  border-bottom: 1px solid #414144;
+
+  &__inner {
+    position: relative;
+
+    &_line {
+      position: absolute;
+      background-color: #fff;
+    }
+
+    &_line_up {
+      height: 50px;
+      width: 1px;
+      top: -30px;
+      left: 30px;
+    }
+
+    &_line_down {
+      width: 1px;
+      top: -30px;
+      left: 30px;
+    }
+
+    &_line_left {
+      height: 1px;
+      width: 12px;
+      top: 20px;
+      left: 30px;
+    }
+  }
+
+  &__actions {
+    background-color: #414144;
+    border-radius: 4px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    z-index: 1;
+
+    &__create, &__delete {
+      padding: 0;
+      width: 20px;
+      height: 20px;
+      border: none;
+
+      &::before {
+        display: block;
+        content: '';
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &__create {
+      &:before {
+        background-color: #7890b2;
+        -webkit-mask: url(../../../../../img/file.svg) no-repeat 50% 50%;
+        mask: url(../../../../../img/file.svg) no-repeat 50% 50%;
+      }
+    }
+
+    &__inner {
+      background-color: #414144;
+      border-radius: 4px;
+      padding: 5px;
+      position: absolute;
+      left: 26px;
+      top: 0;
+    }
+
+    &__delete {
+      &:before {
+        background-color: red;
+        -webkit-mask: url(../../../.../../../../img/trash.svg) no-repeat 50% 50%;
+        mask: url(../../../.../../../../img/trash.svg) no-repeat 50% 50%;
+      }
+    }
+  }
+
+  &__input {
+    border: 1px solid #414144;
+    padding: 0 5px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff;
+    height: 22px;
+
+    &::placeholder {
+      color: #414144;
+    }
+  }
+}
